@@ -12,7 +12,7 @@ contract MEMGOVERNOR is Governor, GovernorCountingSimple, GovernorVotes {
     {}
 
     function votingDelay() public view override returns (uint256) {
-        return 60; // 9 block to snap shot
+        return 9; // 9 block to snap shot
     }
 
     function votingPeriod() public view override returns (uint256) {
@@ -24,7 +24,7 @@ contract MEMGOVERNOR is Governor, GovernorCountingSimple, GovernorVotes {
      * @dev Returns the quorum for a block number, in terms of number of votes: `supply * numerator / denominator`.
      */
     function quorum(uint256 blockNumber) public view virtual override returns (uint256) {
-        return 3;
+        return 2;
     }
 
     function quorumReached(uint256 proposalId) public view returns (bool){

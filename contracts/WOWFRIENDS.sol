@@ -22,7 +22,7 @@ contract WOWFRIENDS is ERC721, ERC721Burnable, Ownable, EIP712, ERC721Votes {
     string private _baseTokenURI;
 
     function _baseURI() internal view virtual override returns (string memory) {
-        return "https://raw.githubusercontent.com/hyunkicho/NFTVOTE/DAOvote/metadata/";
+        return "https://raw.githubusercontent.com/hyunkicho/NFTvote/main/metadata/";
     }
 
     function mint(address to) public onlyOwner {
